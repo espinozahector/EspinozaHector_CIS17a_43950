@@ -41,6 +41,9 @@ void Deck::shuffle(){
     }
 }
 char Deck::deal(){
+//    if(dltCard>.9*nCards){
+//        
+//    }
     return indx[dltCard++];   
 }
 int Deck::getNCrd(){

@@ -1,0 +1,277 @@
+\hypertarget{main_8cpp}{}\section{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}House.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Player.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Computer.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \hyperlink{main_8cpp_a70d792c0d74d70bb9bcb731543b62785}{roll} (unsigned char, unsigned char)
+\item 
+void \hyperlink{main_8cpp_ac2bf81c8d178fb8a48f3115c0d630fe6}{rules} ()
+\item 
+void \hyperlink{main_8cpp_a7112fb06f70cee890ca09a1f9fc60ce0}{over} ()
+\item 
+void \hyperlink{main_8cpp_aa6ccb7e6d1b6dea75505d8c7e7f37d35}{display} (int\mbox{[}$\,$\mbox{]}, int\mbox{[}$\,$\mbox{]})
+\item 
+int \hyperlink{main_8cpp_ac03d69334a67071aea92c46e394739d1}{win} (int, int, bool \&)
+\item 
+int \hyperlink{main_8cpp_acf4d6228f1042a4b1f382ada0e273bf0}{jail} (int \&, int\mbox{[}$\,$\mbox{]}, int \&)
+\item 
+int \hyperlink{main_8cpp_a2d3f8bc46ee9455e77002086831e72b4}{cjail} (int \&, int\mbox{[}$\,$\mbox{]}, int \&)
+\item 
+int \hyperlink{main_8cpp_afbe11b15f250bcf2f5ba7c04e9000cf6}{pay} (int \&, int)
+\item 
+int \hyperlink{main_8cpp_a6e093ceb88c8b699ba2222a6b0f37e38}{cpay} (int \&, int)
+\item 
+int \hyperlink{main_8cpp_ab65f18e926965489f99d9b33defc5bdd}{pchance} (int \&, int \&, int \&, int\mbox{[}$\,$\mbox{]}, int \&, bool \&)
+\item 
+int \hyperlink{main_8cpp_a38d02d6d72c6c87d4ffaa769ceacbe55}{cchance} (int \&, int \&, int \&, int\mbox{[}$\,$\mbox{]}, int \&, bool \&)
+\item 
+int \hyperlink{main_8cpp_a1353dd553e4d00760044a7d3daf3d8cf}{pchest} (int \&, int \&, int \&, int\mbox{[}$\,$\mbox{]}, int \&, bool \&)
+\item 
+int \hyperlink{main_8cpp_a5681b89acaefa3cb266027d36d32b567}{cchest} (int \&, int \&, int \&, int\mbox{[}$\,$\mbox{]}, int \&, bool \&)
+\item 
+int \hyperlink{main_8cpp_a73156ce2a5aad1a2a7d7bce22d20d7df}{move} (int \&, int \&, int \&, int\mbox{[}$\,$\mbox{]})
+\item 
+int \hyperlink{main_8cpp_a7b649d49d9305bd3824bdc24fbd67184}{compmove} (int \&, int \&, int \&, int\mbox{[}$\,$\mbox{]})
+\item 
+int \hyperlink{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{main_8cpp_af08413a3ee12cf78b0ddeea71e2648b3}{S\+I\+Z\+E} =40
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8cpp_a38d02d6d72c6c87d4ffaa769ceacbe55}{}\index{main.\+cpp@{main.\+cpp}!cchance@{cchance}}
+\index{cchance@{cchance}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{cchance(int \&, int \&, int \&, int[], int \&, bool \&)}]{\setlength{\rightskip}{0pt plus 5cm}int cchance (
+\begin{DoxyParamCaption}
+\item[{int \&}]{c1bal, }
+\item[{int \&}]{c1loc, }
+\item[{int \&}]{c1, }
+\item[{int}]{cmove\mbox{[}$\,$\mbox{]}, }
+\item[{int \&}]{p1bal, }
+\item[{bool \&}]{cprison}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_a38d02d6d72c6c87d4ffaa769ceacbe55}
+
+
+Definition at line 786 of file main.\+cpp.
+
+\hypertarget{main_8cpp_a5681b89acaefa3cb266027d36d32b567}{}\index{main.\+cpp@{main.\+cpp}!cchest@{cchest}}
+\index{cchest@{cchest}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{cchest(int \&, int \&, int \&, int[], int \&, bool \&)}]{\setlength{\rightskip}{0pt plus 5cm}int cchest (
+\begin{DoxyParamCaption}
+\item[{int \&}]{c1bal, }
+\item[{int \&}]{c1loc, }
+\item[{int \&}]{c1, }
+\item[{int}]{cmove\mbox{[}$\,$\mbox{]}, }
+\item[{int \&}]{p1bal, }
+\item[{bool \&}]{cprison}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_a5681b89acaefa3cb266027d36d32b567}
+
+
+Definition at line 579 of file main.\+cpp.
+
+\hypertarget{main_8cpp_a2d3f8bc46ee9455e77002086831e72b4}{}\index{main.\+cpp@{main.\+cpp}!cjail@{cjail}}
+\index{cjail@{cjail}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{cjail(int \&, int[], int \&)}]{\setlength{\rightskip}{0pt plus 5cm}int cjail (
+\begin{DoxyParamCaption}
+\item[{int \&}]{c1loc, }
+\item[{int}]{cmove\mbox{[}$\,$\mbox{]}, }
+\item[{int \&}]{c1}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_a2d3f8bc46ee9455e77002086831e72b4}
+
+
+Definition at line 403 of file main.\+cpp.
+
+\hypertarget{main_8cpp_a7b649d49d9305bd3824bdc24fbd67184}{}\index{main.\+cpp@{main.\+cpp}!compmove@{compmove}}
+\index{compmove@{compmove}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{compmove(int \&, int \&, int \&, int[])}]{\setlength{\rightskip}{0pt plus 5cm}int compmove (
+\begin{DoxyParamCaption}
+\item[{int \&}]{c1loc, }
+\item[{int \&}]{c1, }
+\item[{int \&}]{c1bal, }
+\item[{int}]{cmove\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_a7b649d49d9305bd3824bdc24fbd67184}
+
+
+Definition at line 425 of file main.\+cpp.
+
+\hypertarget{main_8cpp_a6e093ceb88c8b699ba2222a6b0f37e38}{}\index{main.\+cpp@{main.\+cpp}!cpay@{cpay}}
+\index{cpay@{cpay}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{cpay(int \&, int)}]{\setlength{\rightskip}{0pt plus 5cm}int cpay (
+\begin{DoxyParamCaption}
+\item[{int \&}]{c1bal, }
+\item[{int}]{c1loc}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_a6e093ceb88c8b699ba2222a6b0f37e38}
+
+
+Definition at line 884 of file main.\+cpp.
+
+\hypertarget{main_8cpp_aa6ccb7e6d1b6dea75505d8c7e7f37d35}{}\index{main.\+cpp@{main.\+cpp}!display@{display}}
+\index{display@{display}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{display(int[], int[])}]{\setlength{\rightskip}{0pt plus 5cm}void display (
+\begin{DoxyParamCaption}
+\item[{int}]{pmove\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{cmove\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_aa6ccb7e6d1b6dea75505d8c7e7f37d35}
+
+
+Definition at line 324 of file main.\+cpp.
+
+\hypertarget{main_8cpp_acf4d6228f1042a4b1f382ada0e273bf0}{}\index{main.\+cpp@{main.\+cpp}!jail@{jail}}
+\index{jail@{jail}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{jail(int \&, int[], int \&)}]{\setlength{\rightskip}{0pt plus 5cm}int jail (
+\begin{DoxyParamCaption}
+\item[{int \&}]{p1loc, }
+\item[{int}]{pmove\mbox{[}$\,$\mbox{]}, }
+\item[{int \&}]{p1}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_acf4d6228f1042a4b1f382ada0e273bf0}
+
+
+Definition at line 380 of file main.\+cpp.
+
+\hypertarget{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{}\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{main(int argc, char $\ast$$\ast$argv)}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+Definition at line 43 of file main.\+cpp.
+
+\hypertarget{main_8cpp_a73156ce2a5aad1a2a7d7bce22d20d7df}{}\index{main.\+cpp@{main.\+cpp}!move@{move}}
+\index{move@{move}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{move(int \&, int \&, int \&, int[])}]{\setlength{\rightskip}{0pt plus 5cm}int move (
+\begin{DoxyParamCaption}
+\item[{int \&}]{p1loc, }
+\item[{int \&}]{p1, }
+\item[{int \&}]{p1bal, }
+\item[{int}]{pmove\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_a73156ce2a5aad1a2a7d7bce22d20d7df}
+
+
+Definition at line 449 of file main.\+cpp.
+
+\hypertarget{main_8cpp_a7112fb06f70cee890ca09a1f9fc60ce0}{}\index{main.\+cpp@{main.\+cpp}!over@{over}}
+\index{over@{over}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{over()}]{\setlength{\rightskip}{0pt plus 5cm}void over (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_a7112fb06f70cee890ca09a1f9fc60ce0}
+
+
+Definition at line 919 of file main.\+cpp.
+
+\hypertarget{main_8cpp_afbe11b15f250bcf2f5ba7c04e9000cf6}{}\index{main.\+cpp@{main.\+cpp}!pay@{pay}}
+\index{pay@{pay}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{pay(int \&, int)}]{\setlength{\rightskip}{0pt plus 5cm}int pay (
+\begin{DoxyParamCaption}
+\item[{int \&}]{p1bal, }
+\item[{int}]{p1loc}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_afbe11b15f250bcf2f5ba7c04e9000cf6}
+
+
+Definition at line 903 of file main.\+cpp.
+
+\hypertarget{main_8cpp_ab65f18e926965489f99d9b33defc5bdd}{}\index{main.\+cpp@{main.\+cpp}!pchance@{pchance}}
+\index{pchance@{pchance}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{pchance(int \&, int \&, int \&, int[], int \&, bool \&)}]{\setlength{\rightskip}{0pt plus 5cm}int pchance (
+\begin{DoxyParamCaption}
+\item[{int \&}]{p1bal, }
+\item[{int \&}]{p1loc, }
+\item[{int \&}]{p1, }
+\item[{int}]{pmove\mbox{[}$\,$\mbox{]}, }
+\item[{int \&}]{c1bal, }
+\item[{bool \&}]{prison}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_ab65f18e926965489f99d9b33defc5bdd}
+
+
+Definition at line 683 of file main.\+cpp.
+
+\hypertarget{main_8cpp_a1353dd553e4d00760044a7d3daf3d8cf}{}\index{main.\+cpp@{main.\+cpp}!pchest@{pchest}}
+\index{pchest@{pchest}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{pchest(int \&, int \&, int \&, int[], int \&, bool \&)}]{\setlength{\rightskip}{0pt plus 5cm}int pchest (
+\begin{DoxyParamCaption}
+\item[{int \&}]{p1bal, }
+\item[{int \&}]{p1loc, }
+\item[{int \&}]{p1, }
+\item[{int}]{pmove\mbox{[}$\,$\mbox{]}, }
+\item[{int \&}]{c1bal, }
+\item[{bool \&}]{prison}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_a1353dd553e4d00760044a7d3daf3d8cf}
+
+
+Definition at line 475 of file main.\+cpp.
+
+\hypertarget{main_8cpp_a70d792c0d74d70bb9bcb731543b62785}{}\index{main.\+cpp@{main.\+cpp}!roll@{roll}}
+\index{roll@{roll}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{roll(unsigned char, unsigned char)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char roll (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{sides, }
+\item[{unsigned char}]{n\+Die}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_a70d792c0d74d70bb9bcb731543b62785}
+
+
+Definition at line 961 of file main.\+cpp.
+
+\hypertarget{main_8cpp_ac2bf81c8d178fb8a48f3115c0d630fe6}{}\index{main.\+cpp@{main.\+cpp}!rules@{rules}}
+\index{rules@{rules}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{rules()}]{\setlength{\rightskip}{0pt plus 5cm}void rules (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_ac2bf81c8d178fb8a48f3115c0d630fe6}
+
+
+Definition at line 938 of file main.\+cpp.
+
+\hypertarget{main_8cpp_ac03d69334a67071aea92c46e394739d1}{}\index{main.\+cpp@{main.\+cpp}!win@{win}}
+\index{win@{win}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{win(int, int, bool \&)}]{\setlength{\rightskip}{0pt plus 5cm}int win (
+\begin{DoxyParamCaption}
+\item[{int}]{p1bal, }
+\item[{int}]{c1bal, }
+\item[{bool \&}]{game}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_ac03d69334a67071aea92c46e394739d1}
+
+
+Definition at line 356 of file main.\+cpp.
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{main_8cpp_af08413a3ee12cf78b0ddeea71e2648b3}{}\index{main.\+cpp@{main.\+cpp}!S\+I\+Z\+E@{S\+I\+Z\+E}}
+\index{S\+I\+Z\+E@{S\+I\+Z\+E}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}const int S\+I\+Z\+E =40}\label{main_8cpp_af08413a3ee12cf78b0ddeea71e2648b3}
+
+
+Definition at line 23 of file main.\+cpp.
+

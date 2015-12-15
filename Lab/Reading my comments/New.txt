@@ -1,0 +1,1229 @@
+/* 
+
+* File:   main.cpp
+
+* Author: Hector Espinoza
+
+* Created on October 9, 2015, 11:40 PM
+
+* Purpose: Monopoly
+
+*/
+
+
+//System Libraries
+
+
+
+
+
+
+
+
+
+//User Libraries
+
+
+
+
+
+//Global constants
+
+//size of the board
+
+
+//Function Prototypes
+
+//roll dice
+
+//couts the rules of the game
+
+//couts game over pic
+
+//displays the board
+
+//determine the winner
+
+
+
+
+
+//player income tax
+
+//computer income tax
+
+//Player chance
+
+//Computer chance
+
+//Player community chest
+
+//computer community chest
+
+//player moves thru the board
+
+//computer moves thru the board
+
+
+//Execution Begins here
+
+** argv) {
+
+//Set the random number seed and size the array
+
+
+
+//Declare Variables
+
+
+
+//player dice
+
+//player bank account
+
+//player location on the board
+
+//computer dice 
+
+//computer bank account
+
+//computer location on the board
+
+
+//misses a turn
+
+//computer misses a turn
+
+//to continue the game until there is a winner
+
+//is the player would like to buy
+
+//play the game or see rules
+
+//If the user would like to buy the property
+
+
+//Turns if the player or computer land on jail
+
+
+*board=new House[SIZE];//dynamic array to hold the name, buy and rent of the property
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//if the house is owned or available
+
+//sets the whole board to true available to buy
+
+
+
+
+//Sets the chance,go,income tax, etc.. to not able to buy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//is the player's board
+
+//the computers board
+
+
+
+//sets the whole array to 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Output the board
+
+
+//Used to check if player lands on a computer owned location
+
+
+
+
+
+
+
+
+//To determine the winner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Subtracts the cost to buy from the players balance
+
+//Is no longer available
+
+//stores the location of where the player owns
+
+
+
+
+
+
+
+
+
+
+//Cout the property the player owns
+
+
+
+
+
+
+
+
+//Ends the player 1 turn
+
+
+
+
+
+
+
+
+
+//Used to skip the computer if the game is over
+
+
+//If player is in prison then computer rolls twice
+
+
+
+
+
+
+
+
+//Computer rolls the dice
+
+
+
+
+
+
+
+
+
+//determines the winner
+
+//doesn't let the computer turn happen if player wins
+
+
+//calls the income tax function
+
+
+
+
+//calls the chance function
+
+
+
+
+//calls the chest function
+
+
+
+
+//Calls the jail function
+
+
+
+
+
+
+//Used to check if player lands on a computer owned location
+
+
+
+
+
+
+
+
+//Determine if the computer will buy the property
+
+
+
+
+
+
+//Subrtracts the cost to buy from the players balance
+
+//Is no longer available
+
+//stores the location of where the player owns 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Couts the game rules
+
+
+
+
+
+
+//Displays the game over text file
+
+
+//Writes to a file::binary the p1 balance and property's
+
+
+
+
+//Cout the property the player owns
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+
+*                              DISPLAY
+
+*******************************************************************************
+
+* purpose: display the board
+
+* input:
+
+*      pmove[]->the players place on teh board
+
+*      cmove[]->the computers place on the board
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+
+*                              Win
+
+*******************************************************************************
+
+* purpose: To determine the winner
+
+* input:
+
+*      p1bal-> player 1's balance
+
+*      c1bal-> computers balance
+
+*      game-> to determine if the game is over
+
+* output:
+
+*      game-> sets game = to false
+
+*      
+
+*/
+
+
+//Wins when computer has no money
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+
+
+*******************************************************************************
+
+* purpose: relocates player to jail
+
+* input:
+
+*      p1loc-> takes in the players location on the board
+
+*      pmove[]-> the array to move player from his position to jail
+
+*      p1->the sum of the dice
+
+* output:
+
+*      p1loc-> to 10 for jail
+
+*      p1=10 so afterwards the movement will continue from jail
+
+*      pmove[]->sets the new location for player
+
+*      
+
+*/
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+
+
+*******************************************************************************
+
+* purpose: relocates computer to jail
+
+* input:
+
+*      c1loc-> takes in the computers location on the board
+
+*      cmove[]-> the array to move computer from his position to jail
+
+*      c1->the sum of the dice
+
+* output:
+
+*      c1loc-> to 10 for jail
+
+*      c1=10 so afterwards the movement will continue from jail
+
+*      cmove[]->sets the new location for computer
+
+*      
+
+*/
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+
+
+*******************************************************************************
+
+* purpose: To move computer around the board
+
+* input:
+
+*      c1loc-> takes in the players location on the board
+
+*      c1->    to move computer around the board c1 times
+
+*      c1bal-> if passed go add $200
+
+*      cmove[]->sets new location for computer
+
+* output:
+
+*      c1bal->if passed go collect $200
+
+*      c1loc->if passed go starts at the beginning
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+
+
+*******************************************************************************
+
+* purpose: To move Player around the board
+
+* input:
+
+*      p1loc-> takes in the players location on the board
+
+*      p1->    to move computer around the board c1 times
+
+*      p1bal-> if passed go add $200
+
+*      pmove[]->sets new location for computer
+
+* output:
+
+*      p1bal->if passed go collect $200
+
+*      p1loc->if passed go starts at the beginning
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+
+
+*******************************************************************************
+
+* purpose: calls community chest to select a random card
+
+* input:
+
+*      p1bal-> the balance of the player
+
+*      p1loc-> location at where player 1 is
+
+*      p1->    the dice of where player 1 is
+
+*      pmove[]-> location  
+
+*      c1bal->
+
+*      prison->
+
+* output:
+
+*      p1bal->if passed go collect $200
+
+*      p1loc->if passed go starts at the beginning
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+
+
+*******************************************************************************
+
+* purpose: calls community chest to select a random card
+
+* input:
+
+*      c1bal-> the balance of the player
+
+*      c1loc-> location at where computer is
+
+*      c1->    the dice of where computer is
+
+*      cmove[]-> location  
+
+*      p1bal-> players balance
+
+*      cprison-> if computer is in jail
+
+* output:
+
+*      c1bal->if passed go collect $200
+
+*      c1loc->if passed go starts at the beginning
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+
+
+*******************************************************************************
+
+* purpose: calls chance to select a random card
+
+* input:
+
+*      p1bal-> the balance of the player
+
+*      p1loc-> location at where player 1 is
+
+*      p1->    the dice of where player 1 is
+
+*      pmove[]-> location  of players moves on board
+
+*      c1bal-> computers balance
+
+*      prison-> is player is in prison
+
+* output:
+
+*      p1bal->if passed go collect $200
+
+*      p1loc->if passed go starts at the beginning
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+
+
+*******************************************************************************
+
+* purpose: calls chance to select a random card
+
+* input:
+
+*      c1bal-> the balance of the computer
+
+*      c1loc-> location at where computer is
+
+*      c1->    the dice of where computer is
+
+*      cmove[]-> location  
+
+*      p1bal-> players balance
+
+*      cprison-> if computer is in jail
+
+* output:
+
+*      c1bal->if passed go collect $200
+
+*      c1loc->if passed go starts at the beginning
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+
+*                              cpay
+
+*******************************************************************************
+
+* purpose: To pay taxes
+
+* input:
+
+*      c1bal-> computer balance
+
+*      c1loc-> computers location
+
+* output:
+
+*      
+
+*/
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+
+*                              pay
+
+*******************************************************************************
+
+* purpose: To pay taxes
+
+* input:
+
+*      p1bal-> computer balance
+
+*      p1loc-> computers location
+
+* output:
+
+*      
+
+*/
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+
+*                              over
+
+*******************************************************************************
+
+* purpose: to diplay the end text
+
+* output:
+
+*      the game over text at the end of the game
+
+*/
+
+
+
+
+//Cout the rules    
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+
+*                              rules
+
+*******************************************************************************
+
+* purpose: to diplay the rules of the game
+
+* display: the rules of the game
+
+*/
+
+
+
+
+
+//Cout the rules    
+
+
+
+
+
+
+
+
+
+/*******************************************************************************
+
+*                              roll
+
+*******************************************************************************
+
+* purpose: To roll the dice
+
+* input:
+
+*      sides-> number of sides on the dice
+
+*      nDie-> number of dice in game
+
+* output:
+
+*		sum-> the total sum of the dice      
+
+*/
+
+
+//Declare the sum the die rolls 
+
+
+//Loop for each die
+
+
+
+
+
+
+
